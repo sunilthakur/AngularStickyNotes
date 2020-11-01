@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row pl-2 pr-2 pt-2">
+    <div class="col-md-6 col-sm-6 col-xs-8 center-div">
+      <textarea class="form-control" style="background-color:#000" rows="1" placeholder="Create sticky note" *ngIf="collapsed" (click)="collapsed=!collapsed"></textarea>
+      <section class="collapsible pt-1" [@collapse]="collapsed">
+        <div class="card">
+          <div class="card-header p-1">
+            <input type="text" [(ngModel)]="notesModel.noteTitle" [style.background]="selectedColor" [style.color]="foreColor" placeholder="Header title" class="form-control mb-0" />
+          </div>
+          <div class="card-body p-0" [style.background]="selectedColor" [style.color]="foreColor">
+            <textarea [(ngModel)]="notesModel.noteBody" class="form-control" [style.background]="selectedColor" [style.color]="foreColor" rows="3" placeholder="Take a note"></textarea>
+            <!--<textarea class="form-control mt-1" [style.background]="selectedColor" [style.color]="foreColor" rows="1" placeholder="Footer details"></textarea>-->
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-md-6 col-xs-12 foot">
+                <div class="col-md-1"> <div class="color-box" [style.background]="arrayColors['color1']" (click)="onChangeColor(color1)"></div>                </div>
+                <div class="col-md-1"> <div class="color-box" [style.background]="arrayColors['color2']" (click)="onChangeColor(color2)"></div>                </div>
+                <div class="col-md-1">  <div class="color-box" [style.background]="arrayColors['color3']" (click)="onChangeColor(color3)"></div></div>
+                <div class="col-md-1"> <div class="color-box" [style.background]="arrayColors['color4']" (click)="onChangeColor(color4)"></div></div>
+                <div class="col-md-1"> <div class="color-box" [style.background]="arrayColors['color5']" (click)="onChangeColor(color5)"></div></div>
+                <div class="col-md-1"> <div class="color-box" [style.background]="arrayColors['color6']" (click)="onChangeColor(color6)"></div></div>
+              </div>
+              <div class="col-md-6 col-xs-12 text-right pull-right">
+                <button type="button" class="btn btn-sm btn-success mr-1" (click)="saveNote()">
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" *ngIf="spinner"></span>Save
+                </button>
+                <button type="button" class="btn btn-sm btn-secondary" (click)="onClose()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-4 pull-right text-right">
+      <a href="javascript:void" class="btn btn-sm btn-danger" (click)="logout()">Logout</a>
+    </div>
+  </div>
+  <div class="row pt-2">
+    <div class="progress" style="width:100%;" *ngIf="loading">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Loading Notes</div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 pull-left pt-1" *ngFor="let item of notesList">
+      <div class="card" [style.background]="item.noteBackGroundColor" [style.color]="item.noteForeGroundColor" id="{{item.noteId}}" style="height:200px;max-height:200px;">
+        <div class="card-body pl-0 pb-1">
+          <p (click)="editNote(item)" class="card-title pl-1 pr-1 text-center font-weight-bold">  {{item.noteTitle}}</p>
+          <p (click)="editNote(item)" class="card-text pl-3" style="height:100px;max-height:100px;overflow-y:auto"> {{item.noteBody}}</p>
+          <p>
+            <i class="card-text pl-1 pr-1" style="font-size:0.8rem;"> Updated On: {{item.updatedOn | date: 'dd MMM yyyy'}}</i>
+            <i class="fa fa-trash" style="float:right;" (click)="deleteNote(item.noteId)"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

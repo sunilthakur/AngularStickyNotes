@@ -1,0 +1,16 @@
+.loginform {
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 10px !important;
+  position: relative !important;
+  border: 1px solid #ccc;
+  font-size:1.3rem;
+}
+
+input[type='text'], input[type='password'] {
+  font-size: 1rem;
+}
+.form-group{
+    margin-bottom:0px !important;
+}
+

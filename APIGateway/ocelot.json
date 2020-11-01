@@ -1,0 +1,44 @@
+{
+  "Routes": [
+    //Users API
+    {
+      "DownstreamPathTemplate": "/api/v1/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "user",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/user/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "user/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/user/ValidateUserLogin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "user/validateuserlogin",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5020"
+  }
+}

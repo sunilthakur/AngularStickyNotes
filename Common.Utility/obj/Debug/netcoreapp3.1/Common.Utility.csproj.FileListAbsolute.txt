@@ -1,0 +1,16 @@
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.deps.json
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.dll
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.pdb
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.csprojAssemblyReference.cache
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.AssemblyInfoInputs.cache
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.AssemblyInfo.cs
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.dll
+C:\Users\kumar\source\repos\StickyNotesApp\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.pdb
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.deps.json
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.dll
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\bin\Debug\netcoreapp3.1\Common.Utility.pdb
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.csprojAssemblyReference.cache
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.AssemblyInfoInputs.cache
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.AssemblyInfo.cs
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.dll
+D:\Sunil-SampleProjects\MicroServices\StickyNotes\Common.Utility\obj\Debug\netcoreapp3.1\Common.Utility.pdb

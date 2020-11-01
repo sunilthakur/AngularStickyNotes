@@ -1,0 +1,93 @@
+{
+  "Routes": [
+    //Users API
+    {
+      "DownstreamPathTemplate": "/api/v1/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "/user/createuser",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/user/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/user/ValidateUserLogin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "/user/validateuserlogin",
+      "UpstreamHttpMethod": [ "POST" ]
+    }, //notes api
+
+    {
+      "DownstreamPathTemplate": "/api/v1/notes/createnote",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44360"
+        }
+      ],
+      "UpstreamPathTemplate": "/notes/createnote",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/notes/getnotespagedlist",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44360"
+        }
+      ],
+      "UpstreamPathTemplate": "/notes/getnotespagedlist",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/notes/updatenote",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44360"
+        }
+      ],
+      "UpstreamPathTemplate": "/notes/updatenote",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/notes/deletenote",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44360"
+        }
+      ],
+      "UpstreamPathTemplate": "/notes/deletenote",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5020"
+  }
+}
